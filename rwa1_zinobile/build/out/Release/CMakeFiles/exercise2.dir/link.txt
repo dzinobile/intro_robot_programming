@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/exercise2.dir/exercise2/src/exercise2.cpp.o -o exercise2 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/main_cpp.dir/kitting/src/main_cpp.cpp.o -o main_cpp 

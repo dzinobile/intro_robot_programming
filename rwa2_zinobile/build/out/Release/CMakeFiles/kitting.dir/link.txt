@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/kitting.dir/kitting/src/kitting.cpp.o CMakeFiles/kitting.dir/kitting/src/main.cpp.o -o kitting 

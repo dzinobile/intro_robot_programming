@@ -111,6 +111,8 @@ kitting: CMakeFiles/kitting.dir/build.make
 kitting: CMakeFiles/kitting.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/build/out/Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable kitting"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kitting.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Resolve name mangling"
+	./kitting | c++filt -t
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Running Valgrind after building kitting"
 	valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-origins=yes ./kitting
 

@@ -12,17 +12,12 @@ include_directories(kitting/include)
 add_executable(kitting kitting/src/kitting.cpp kitting/src/main.cpp)
 #add_executable(main kitting/src/main.cpp)
 
-
-
-
-
-
-# add_custom_command(TARGET kitting POST_BUILD
-#     COMMAND ./kitting | c++filt -t
-#     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-#     COMMENT "Resolve name mangling"
-#     VERBATIM
-# )
+add_custom_command(TARGET kitting POST_BUILD
+    COMMAND ./kitting | c++filt -t
+    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+    COMMENT "Resolve name mangling"
+    VERBATIM
+)
 
 add_custom_command(TARGET kitting POST_BUILD
     COMMAND valgrind --show-error-list=yes --leak-check=full --show-leak-kinds=all --track-origins=yes ./kitting

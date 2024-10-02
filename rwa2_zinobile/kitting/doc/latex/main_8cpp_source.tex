@@ -1,0 +1,41 @@
+\hypertarget{main_8cpp_source}{}\doxysection{main.\+cpp}
+\label{main_8cpp_source}\index{kitting/src/main.cpp@{kitting/src/main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{kitting_8hpp}{kitting.hpp}}"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <array>}}
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00006}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00010     \textcolor{keywordtype}{int} r\_initial\{\}, g\_initial\{\}, b\_initial\{\};}
+\DoxyCodeLine{00011     \mbox{\hyperlink{kitting_8cpp_a0c31e1b1a8c8fff9904b36a304f60824}{get\_initial\_state}}(r\_initial, g\_initial, b\_initial);}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00014     \textcolor{keywordtype}{int} r\_goal\{\}, g\_goal\{\}, b\_goal\{\};}
+\DoxyCodeLine{00015     \mbox{\hyperlink{kitting_8cpp_acb7762618a1a559bb05cb0c104b2128f}{get\_goal\_state}}(r\_goal, g\_goal, b\_goal);}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00018     std::array initial\_state\{r\_initial, g\_initial, b\_initial\};}
+\DoxyCodeLine{00019     std::array goal\_state\{r\_goal, g\_goal, b\_goal\};}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00022     \textcolor{keywordtype}{bool} gripper\_empty = \textcolor{keyword}{true};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00025     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{char} i = 0; i < 3; i++)}
+\DoxyCodeLine{00026     \{}
+\DoxyCodeLine{00027         \textcolor{keywordflow}{while} (goal\_state.at(i) > 0)}
+\DoxyCodeLine{00028         \{}
+\DoxyCodeLine{00029             initial\_state.at(i) = \mbox{\hyperlink{kitting_8cpp_a1da3b45d5a190dd191b51c99b09ac72b}{pick}}(i, initial\_state.at(i), gripper\_empty);}
+\DoxyCodeLine{00030             gripper\_empty = \textcolor{keyword}{false};}
+\DoxyCodeLine{00031             \mbox{\hyperlink{kitting_8cpp_a19a5345d2ea63b331a406ee0d858d7bf}{gripper\_status}}(gripper\_empty);}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033             goal\_state.at(i) = \mbox{\hyperlink{kitting_8cpp_a501472bb4e47fb34ea4ca18650628474}{place}}(i, goal\_state.at(i), gripper\_empty);}
+\DoxyCodeLine{00034             gripper\_empty = \textcolor{keyword}{true};}
+\DoxyCodeLine{00035             \mbox{\hyperlink{kitting_8cpp_a19a5345d2ea63b331a406ee0d858d7bf}{gripper\_status}}(gripper\_empty);}
+\DoxyCodeLine{00036         \}}
+\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00040 \}}
+
+\end{DoxyCode}

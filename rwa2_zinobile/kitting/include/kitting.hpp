@@ -9,3 +9,4 @@ void get_goal_state(int &rg, int &gg, int &bg);
 int pick(int color, int bin_status, bool gripper_empty);
 int place(int color, int blocks_needed, bool gripper_empty);
 void gripper_status(bool gripper_empty);
+bool check_inputs(int ri, int gi, int bi, int rg, int gg, int bg);

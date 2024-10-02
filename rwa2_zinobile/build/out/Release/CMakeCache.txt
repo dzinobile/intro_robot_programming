@@ -83,9 +83,6 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
 //Flags used by the linker during all build types.
-CMAKE_EXE_ER_FLAGS:STRING=
-
-//Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
 
 //Flags used by the linker during DEBUG builds.
@@ -235,24 +232,6 @@ kitting_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 kitting_SOURCE_DIR:STATIC=/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile
-
-//Value Computed by CMake
-lecture5_BINARY_DIR:STATIC=/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/build/out/Release
-
-//Value Computed by CMake
-lecture5_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-lecture5_SOURCE_DIR:STATIC=/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile
-
-//Value Computed by CMake
-main_cpp_BINARY_DIR:STATIC=/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/build/out/Release
-
-//Value Computed by CMake
-main_cpp_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-main_cpp_SOURCE_DIR:STATIC=/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile
 
 
 ########################

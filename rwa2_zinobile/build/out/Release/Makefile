@@ -129,19 +129,6 @@ kitting/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kitting.dir/build.make CMakeFiles/kitting.dir/build
 .PHONY : kitting/fast
 
-#=============================================================================
-# Target rules for targets named demangle
-
-# Build rule for target.
-demangle: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demangle
-.PHONY : demangle
-
-# fast build rule for target.
-demangle/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demangle.dir/build.make CMakeFiles/demangle.dir/build
-.PHONY : demangle/fast
-
 kitting/src/kitting.o: kitting/src/kitting.cpp.o
 .PHONY : kitting/src/kitting.o
 
@@ -198,7 +185,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... demangle"
 	@echo "... kitting"
 	@echo "... kitting/src/kitting.o"
 	@echo "... kitting/src/kitting.i"

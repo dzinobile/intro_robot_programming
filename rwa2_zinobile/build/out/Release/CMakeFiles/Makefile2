@@ -64,7 +64,6 @@ CMAKE_BINARY_DIR = /home/dzinobile/Documents/UMD/Semester_1/programming/github/i
 
 # The main recursive "all" target.
 all: CMakeFiles/kitting.dir/all
-all: CMakeFiles/demangle.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +72,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/kitting.dir/clean
-clean: CMakeFiles/demangle.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -101,32 +99,6 @@ kitting: CMakeFiles/kitting.dir/rule
 CMakeFiles/kitting.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kitting.dir/build.make CMakeFiles/kitting.dir/clean
 .PHONY : CMakeFiles/kitting.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/demangle.dir
-
-# All Build rule for target.
-CMakeFiles/demangle.dir/all: CMakeFiles/kitting.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demangle.dir/build.make CMakeFiles/demangle.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demangle.dir/build.make CMakeFiles/demangle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/build/out/Release/CMakeFiles --progress-num= "Built target demangle"
-.PHONY : CMakeFiles/demangle.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/demangle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/build/out/Release/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/demangle.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/build/out/Release/CMakeFiles 0
-.PHONY : CMakeFiles/demangle.dir/rule
-
-# Convenience name for target.
-demangle: CMakeFiles/demangle.dir/rule
-.PHONY : demangle
-
-# clean rule for target.
-CMakeFiles/demangle.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/demangle.dir/build.make CMakeFiles/demangle.dir/clean
-.PHONY : CMakeFiles/demangle.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>&#x202A;RWA2_Zinobile: &#x202A;kitting/include/kitting.hpp Source File</title>
+<title>&#x202A;RWA2_Zinobile: &#x202A;/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/kitting/include/kitting.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d7da572655e0c7bf134af94d6faa0f89.html">&#x202A;kitting</a></li><li class="navelem"><a class="el" href="dir_198b76f2cb8009dc4680a5bc2f884e6a.html">&#x202A;include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">&#x202A;include</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,11 +77,13 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">int</span> <a class="code" href="kitting_8hpp.html#a3260b6dcc490a9144c34c6af05c8b535">pick</a>(<span class="keywordtype">int</span> color, <span class="keywordtype">int</span> bin_status, <span class="keywordtype">bool</span> gripper_empty);</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">int</span> <a class="code" href="kitting_8hpp.html#ae218e25b0f31c2d79e9838f1b3076a72">place</a>(<span class="keywordtype">int</span> color, <span class="keywordtype">int</span> blocks_needed, <span class="keywordtype">bool</span> gripper_empty);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="kitting_8hpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a>(<span class="keywordtype">bool</span> gripper_empty);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="kitting_8hpp.html#ad712f8d275f6b19379cb35969f806dad">check_inputs</a>(<span class="keywordtype">int</span> ri, <span class="keywordtype">int</span> gi, <span class="keywordtype">int</span> bi, <span class="keywordtype">int</span> rg, <span class="keywordtype">int</span> gg, <span class="keywordtype">int</span> bg);</div>
 <div class="ttc" id="akitting_8hpp_html_a0c31e1b1a8c8fff9904b36a304f60824"><div class="ttname"><a href="kitting_8hpp.html#a0c31e1b1a8c8fff9904b36a304f60824">get_initial_state</a></div><div class="ttdeci">void get_initial_state(int &amp;ri, int &amp;gi, int &amp;bi)</div><div class="ttdoc">Function to retrieve initial state of bins.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00005">kitting.cpp:5</a></div></div>
-<div class="ttc" id="akitting_8hpp_html_a19a5345d2ea63b331a406ee0d858d7bf"><div class="ttname"><a href="kitting_8hpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a></div><div class="ttdeci">void gripper_status(bool gripper_empty)</div><div class="ttdoc">Function to return status of gripper.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00102">kitting.cpp:102</a></div></div>
-<div class="ttc" id="akitting_8hpp_html_a3260b6dcc490a9144c34c6af05c8b535"><div class="ttname"><a href="kitting_8hpp.html#a3260b6dcc490a9144c34c6af05c8b535">pick</a></div><div class="ttdeci">int pick(int color, int bin_status, bool gripper_empty)</div><div class="ttdoc">Pick function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00066">kitting.cpp:66</a></div></div>
-<div class="ttc" id="akitting_8hpp_html_acb7762618a1a559bb05cb0c104b2128f"><div class="ttname"><a href="kitting_8hpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a></div><div class="ttdeci">void get_goal_state(int &amp;rg, int &amp;gg, int &amp;bg)</div><div class="ttdoc">Function to retrieve desired state of tray.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00036">kitting.cpp:36</a></div></div>
-<div class="ttc" id="akitting_8hpp_html_ae218e25b0f31c2d79e9838f1b3076a72"><div class="ttname"><a href="kitting_8hpp.html#ae218e25b0f31c2d79e9838f1b3076a72">place</a></div><div class="ttdeci">int place(int color, int blocks_needed, bool gripper_empty)</div><div class="ttdoc">Place function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00084">kitting.cpp:84</a></div></div>
+<div class="ttc" id="akitting_8hpp_html_a19a5345d2ea63b331a406ee0d858d7bf"><div class="ttname"><a href="kitting_8hpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a></div><div class="ttdeci">void gripper_status(bool gripper_empty)</div><div class="ttdoc">Function to return status of gripper.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00131">kitting.cpp:131</a></div></div>
+<div class="ttc" id="akitting_8hpp_html_a3260b6dcc490a9144c34c6af05c8b535"><div class="ttname"><a href="kitting_8hpp.html#a3260b6dcc490a9144c34c6af05c8b535">pick</a></div><div class="ttdeci">int pick(int color, int bin_status, bool gripper_empty)</div><div class="ttdoc">Pick function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00095">kitting.cpp:95</a></div></div>
+<div class="ttc" id="akitting_8hpp_html_acb7762618a1a559bb05cb0c104b2128f"><div class="ttname"><a href="kitting_8hpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a></div><div class="ttdeci">void get_goal_state(int &amp;rg, int &amp;gg, int &amp;bg)</div><div class="ttdoc">Function to retrieve desired state of tray.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00032">kitting.cpp:32</a></div></div>
+<div class="ttc" id="akitting_8hpp_html_ad712f8d275f6b19379cb35969f806dad"><div class="ttname"><a href="kitting_8hpp.html#ad712f8d275f6b19379cb35969f806dad">check_inputs</a></div><div class="ttdeci">bool check_inputs(int ri, int gi, int bi, int rg, int gg, int bg)</div><div class="ttdoc">Function to confirm tray goal state requirements and if enough blocks are in bins to meet goal.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00057">kitting.cpp:57</a></div></div>
+<div class="ttc" id="akitting_8hpp_html_ae218e25b0f31c2d79e9838f1b3076a72"><div class="ttname"><a href="kitting_8hpp.html#ae218e25b0f31c2d79e9838f1b3076a72">place</a></div><div class="ttdeci">int place(int color, int blocks_needed, bool gripper_empty)</div><div class="ttdoc">Place function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00113">kitting.cpp:113</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

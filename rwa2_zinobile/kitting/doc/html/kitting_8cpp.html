@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>&#x202A;RWA2_Zinobile: &#x202A;kitting/src/kitting.cpp File Reference</title>
+<title>&#x202A;RWA2_Zinobile: &#x202A;/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/kitting/src/kitting.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d7da572655e0c7bf134af94d6faa0f89.html">&#x202A;kitting</a></li><li class="navelem"><a class="el" href="dir_9a937495bdb4431cfabd886f865a4c1c.html">&#x202A;src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">&#x202A;src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,11 +77,11 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for kitting.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="kitting_8cpp__incl.png" border="0" usemap="#akitting_2src_2kitting_8cpp" alt=""/></div>
-<map name="akitting_2src_2kitting_8cpp" id="akitting_2src_2kitting_8cpp">
-<area shape="rect" title=" " alt="" coords="11,5,171,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,85,107"/>
-<area shape="rect" title=" " alt="" coords="109,80,165,107"/>
+<div class="center"><img src="kitting_8cpp__incl.png" border="0" usemap="#a_2home_2dzinobile_2_documents_2_u_m_d_2_semester__1_2programming_2github_2intro__robot__programming_2rwa2__zinobile_2kitting_2src_2kitting_8cpp" alt=""/></div>
+<map name="a_2home_2dzinobile_2_documents_2_u_m_d_2_semester__1_2programming_2github_2intro__robot__programming_2rwa2__zinobile_2kitting_2src_2kitting_8cpp" id="a_2home_2dzinobile_2_documents_2_u_m_d_2_semester__1_2programming_2github_2intro__robot__programming_2rwa2__zinobile_2kitting_2src_2kitting_8cpp">
+<area shape="rect" title=" " alt="" coords="5,5,264,76"/>
+<area shape="rect" title=" " alt="" coords="49,124,129,151"/>
+<area shape="rect" title=" " alt="" coords="153,124,209,151"/>
 </map>
 </div>
 </div>
@@ -95,6 +95,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acb7762618a1a559bb05cb0c104b2128f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kitting_8cpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a> (int &amp;rg, int &amp;gg, int &amp;bg)</td></tr>
 <tr class="memdesc:acb7762618a1a559bb05cb0c104b2128f"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Function to retrieve desired state of tray.  <a href="kitting_8cpp.html#acb7762618a1a559bb05cb0c104b2128f">More...</a><br /></td></tr>
 <tr class="separator:acb7762618a1a559bb05cb0c104b2128f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad712f8d275f6b19379cb35969f806dad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kitting_8cpp.html#ad712f8d275f6b19379cb35969f806dad">check_inputs</a> (int ri, int gi, int bi, int rg, int gg, int bg)</td></tr>
+<tr class="memdesc:ad712f8d275f6b19379cb35969f806dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Function to confirm tray goal state requirements and if enough blocks are in bins to meet goal.  <a href="kitting_8cpp.html#ad712f8d275f6b19379cb35969f806dad">More...</a><br /></td></tr>
+<tr class="separator:ad712f8d275f6b19379cb35969f806dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1da3b45d5a190dd191b51c99b09ac72b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kitting_8cpp.html#a1da3b45d5a190dd191b51c99b09ac72b">pick</a> (int int_color, int bin_status, bool gripper_empty)</td></tr>
 <tr class="memdesc:a1da3b45d5a190dd191b51c99b09ac72b"><td class="mdescLeft">&#160;</td><td class="mdescRight">&#x202A;Pick function.  <a href="kitting_8cpp.html#a1da3b45d5a190dd191b51c99b09ac72b">More...</a><br /></td></tr>
 <tr class="separator:a1da3b45d5a190dd191b51c99b09ac72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,6 +109,65 @@ Functions</h2></td></tr>
 <tr class="separator:a19a5345d2ea63b331a406ee0d858d7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ad712f8d275f6b19379cb35969f806dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad712f8d275f6b19379cb35969f806dad">&#9670;&nbsp;</a></span>check_inputs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool check_inputs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>&#x202A;Function to confirm tray goal state requirements and if enough blocks are in bins to meet goal. </p>
+<p class="DocNodeLTR">Confirm if enough blocks in bins to meet goal</p>
+<p class="DocNodeLTR">Confirm minimum 1, maximum 10 total blocks on tray</p>
+<p class="DocNodeLTR">Return true/false value on if the input check passed</p>
+
+<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00057">57</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
+
+</div>
+</div>
 <a id="acb7762618a1a559bb05cb0c104b2128f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb7762618a1a559bb05cb0c104b2128f">&#9670;&nbsp;</a></span>get_goal_state()</h2>
 
@@ -139,8 +201,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>&#x202A;Function to retrieve desired state of tray. </p>
+<p class="DocNodeLTR">Initialize function with int reference inputs </p>
+<p class="DocNodeLTR">Create array of pointers to addresses of goal states</p>
+<p class="DocNodeLTR">Write goal state inputs to memory addresses in pointer array</p>
+<p class="DocNodeLTR">Reject invalid goal state inputs</p>
 
-<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00036">36</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00032">32</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
 
 </div>
 </div>
@@ -177,6 +243,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>&#x202A;Function to retrieve initial state of bins. </p>
+<p class="DocNodeLTR">Initialize function with int reference inputs </p>
+<p class="DocNodeLTR">Create array of pointers to addresses of initial states</p>
+<p class="DocNodeLTR">Write initial state inputs to memory addresses in pointer array</p>
+<p class="DocNodeLTR">Reject invalid initial state inputs</p>
 
 <p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00005">5</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
 
@@ -200,7 +270,7 @@ Functions</h2></td></tr>
 
 <p>&#x202A;Function to return status of gripper. </p>
 
-<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00102">102</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00131">131</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
 
 </div>
 </div>
@@ -237,8 +307,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>&#x202A;Pick function. </p>
+<p class="DocNodeLTR">Gripper status precondition</p>
 
-<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00066">66</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00095">95</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,8 +346,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>&#x202A;Place function. </p>
+<p class="DocNodeLTR">Gripper status precondition</p>
 
-<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00084">84</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kitting_8cpp_source.html#l00113">113</a> of file <a class="el" href="kitting_8cpp_source.html">kitting.cpp</a>.</p>
 
 </div>
 </div>

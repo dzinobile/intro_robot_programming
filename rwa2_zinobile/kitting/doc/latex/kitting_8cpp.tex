@@ -1,5 +1,5 @@
-\hypertarget{kitting_8cpp}{}\doxysection{kitting/src/kitting.cpp File Reference}
-\label{kitting_8cpp}\index{kitting/src/kitting.cpp@{kitting/src/kitting.cpp}}
+\hypertarget{kitting_8cpp}{}\doxysection{/home/dzinobile/\+Documents/\+UMD/\+Semester\+\_\+1/programming/github/intro\+\_\+robot\+\_\+programming/rwa2\+\_\+zinobile/kitting/src/kitting.cpp File Reference}
+\label{kitting_8cpp}\index{/home/dzinobile/Documents/UMD/Semester\_1/programming/github/intro\_robot\_programming/rwa2\_zinobile/kitting/src/kitting.cpp@{/home/dzinobile/Documents/UMD/Semester\_1/programming/github/intro\_robot\_programming/rwa2\_zinobile/kitting/src/kitting.cpp}}
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$array$>$}\newline
 Include dependency graph for kitting.\+cpp\+:
@@ -7,7 +7,7 @@ Include dependency graph for kitting.\+cpp\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=204pt]{kitting_8cpp__incl}
+\includegraphics[width=274pt]{kitting_8cpp__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Functions}
@@ -17,6 +17,8 @@ void \mbox{\hyperlink{kitting_8cpp_a0c31e1b1a8c8fff9904b36a304f60824}{get\+\_\+i
 \begin{DoxyCompactList}\small\item\em Function to retrieve initial state of bins. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{kitting_8cpp_acb7762618a1a559bb05cb0c104b2128f}{get\+\_\+goal\+\_\+state}} (int \&rg, int \&gg, int \&bg)
 \begin{DoxyCompactList}\small\item\em Function to retrieve desired state of tray. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{kitting_8cpp_ad712f8d275f6b19379cb35969f806dad}{check\+\_\+inputs}} (int ri, int gi, int bi, int rg, int gg, int bg)
+\begin{DoxyCompactList}\small\item\em Function to confirm tray goal state requirements and if enough blocks are in bins to meet goal. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{kitting_8cpp_a1da3b45d5a190dd191b51c99b09ac72b}{pick}} (int int\+\_\+color, int bin\+\_\+status, bool gripper\+\_\+empty)
 \begin{DoxyCompactList}\small\item\em Pick function. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{kitting_8cpp_a501472bb4e47fb34ea4ca18650628474}{place}} (int int\+\_\+color, int blocks\+\_\+needed, bool gripper\+\_\+empty)
@@ -26,6 +28,24 @@ void \mbox{\hyperlink{kitting_8cpp_a19a5345d2ea63b331a406ee0d858d7bf}{gripper\+\
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kitting_8cpp_ad712f8d275f6b19379cb35969f806dad}\label{kitting_8cpp_ad712f8d275f6b19379cb35969f806dad}} 
+\index{kitting.cpp@{kitting.cpp}!check\_inputs@{check\_inputs}}
+\index{check\_inputs@{check\_inputs}!kitting.cpp@{kitting.cpp}}
+\doxysubsubsection{\texorpdfstring{check\_inputs()}{check\_inputs()}}
+{\footnotesize\ttfamily bool check\+\_\+inputs (\begin{DoxyParamCaption}\item[{int}]{ri,  }\item[{int}]{gi,  }\item[{int}]{bi,  }\item[{int}]{rg,  }\item[{int}]{gg,  }\item[{int}]{bg }\end{DoxyParamCaption})}
+
+
+
+Function to confirm tray goal state requirements and if enough blocks are in bins to meet goal. 
+
+Confirm if enough blocks in bins to meet goal
+
+Confirm minimum 1, maximum 10 total blocks on tray
+
+Return true/false value on if the input check passed
+
+Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
+
 \mbox{\Hypertarget{kitting_8cpp_acb7762618a1a559bb05cb0c104b2128f}\label{kitting_8cpp_acb7762618a1a559bb05cb0c104b2128f}} 
 \index{kitting.cpp@{kitting.cpp}!get\_goal\_state@{get\_goal\_state}}
 \index{get\_goal\_state@{get\_goal\_state}!kitting.cpp@{kitting.cpp}}
@@ -36,9 +56,13 @@ void \mbox{\hyperlink{kitting_8cpp_a19a5345d2ea63b331a406ee0d858d7bf}{gripper\+\
 
 Function to retrieve desired state of tray. 
 
+Initialize function with int reference inputs Create array of pointers to addresses of goal states
 
+Write goal state inputs to memory addresses in pointer array
 
-Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00036}{36}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
+Reject invalid goal state inputs
+
+Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
 
 \mbox{\Hypertarget{kitting_8cpp_a0c31e1b1a8c8fff9904b36a304f60824}\label{kitting_8cpp_a0c31e1b1a8c8fff9904b36a304f60824}} 
 \index{kitting.cpp@{kitting.cpp}!get\_initial\_state@{get\_initial\_state}}
@@ -50,7 +74,11 @@ Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00036}{36}} of file \mb
 
 Function to retrieve initial state of bins. 
 
+Initialize function with int reference inputs Create array of pointers to addresses of initial states
 
+Write initial state inputs to memory addresses in pointer array
+
+Reject invalid initial state inputs
 
 Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
 
@@ -66,7 +94,7 @@ Function to return status of gripper.
 
 
 
-Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00102}{102}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
+Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
 
 \mbox{\Hypertarget{kitting_8cpp_a1da3b45d5a190dd191b51c99b09ac72b}\label{kitting_8cpp_a1da3b45d5a190dd191b51c99b09ac72b}} 
 \index{kitting.cpp@{kitting.cpp}!pick@{pick}}
@@ -78,9 +106,9 @@ Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00102}{102}} of file \m
 
 Pick function. 
 
+Gripper status precondition
 
-
-Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
+Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
 
 \mbox{\Hypertarget{kitting_8cpp_a501472bb4e47fb34ea4ca18650628474}\label{kitting_8cpp_a501472bb4e47fb34ea4ca18650628474}} 
 \index{kitting.cpp@{kitting.cpp}!place@{place}}
@@ -92,7 +120,7 @@ Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00066}{66}} of file \mb
 
 Place function. 
 
+Gripper status precondition
 
-
-Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
+Definition at line \mbox{\hyperlink{kitting_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{kitting_8cpp_source}{kitting.\+cpp}}.
 

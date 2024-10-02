@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>&#x202A;RWA2_Zinobile: &#x202A;kitting/src/main.cpp Source File</title>
+<title>&#x202A;RWA2_Zinobile: &#x202A;/home/dzinobile/Documents/UMD/Semester_1/programming/github/intro_robot_programming/rwa2_zinobile/kitting/src/main.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d7da572655e0c7bf134af94d6faa0f89.html">&#x202A;kitting</a></li><li class="navelem"><a class="el" href="dir_9a937495bdb4431cfabd886f865a4c1c.html">&#x202A;src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">&#x202A;src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,45 +73,55 @@ $(function() {
 <a href="main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kitting_8hpp.html">kitting.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> r_initial{}, g_initial{}, b_initial{};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="kitting_8cpp.html#a0c31e1b1a8c8fff9904b36a304f60824">get_initial_state</a>(r_initial, g_initial, b_initial);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> r_goal{}, g_goal{}, b_goal{};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="kitting_8cpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a>(r_goal, g_goal, b_goal);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::array initial_state{r_initial, g_initial, b_initial};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::array goal_state{r_goal, g_goal, b_goal};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> gripper_empty = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">char</span> i = 0; i &lt; 3; i++)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">while</span> (goal_state.at(i) &gt; 0)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            initial_state.at(i) = <a class="code" href="kitting_8cpp.html#a1da3b45d5a190dd191b51c99b09ac72b">pick</a>(i, initial_state.at(i), gripper_empty);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            gripper_empty = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="kitting_8cpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a>(gripper_empty);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            goal_state.at(i) = <a class="code" href="kitting_8cpp.html#a501472bb4e47fb34ea4ca18650628474">place</a>(i, goal_state.at(i), gripper_empty);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            gripper_empty = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="kitting_8cpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a>(gripper_empty);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    5</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">int</span> r_initial{}, g_initial{}, b_initial{};</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="kitting_8cpp.html#a0c31e1b1a8c8fff9904b36a304f60824">get_initial_state</a>(r_initial, g_initial, b_initial);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> r_goal{}, g_goal{}, b_goal{};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="kitting_8cpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a>(r_goal, g_goal, b_goal);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> input_check = <a class="code" href="kitting_8cpp.html#ad712f8d275f6b19379cb35969f806dad">check_inputs</a>(r_initial, g_initial, b_initial, r_goal, g_goal, b_goal);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span> (input_check == <span class="keyword">false</span>) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Input check failed!\n&quot;</span>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="kitting_8cpp.html#a0c31e1b1a8c8fff9904b36a304f60824">get_initial_state</a>(r_initial, g_initial, b_initial);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="kitting_8cpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a>(r_goal, g_goal, b_goal);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        input_check = <a class="code" href="kitting_8cpp.html#ad712f8d275f6b19379cb35969f806dad">check_inputs</a>(r_initial, g_initial, b_initial, r_goal, g_goal, b_goal);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Input check passed!\n&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;---------------------------------------------------------------------------------------------\n&quot;</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::array initial_state{r_initial, g_initial, b_initial};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::array goal_state{r_goal, g_goal, b_goal};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> gripper_empty = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">char</span> i = 0; i &lt; 3; i++)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">while</span> (goal_state.at(i) &gt; 0)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            initial_state.at(i) = <a class="code" href="kitting_8cpp.html#a1da3b45d5a190dd191b51c99b09ac72b">pick</a>(i, initial_state.at(i), gripper_empty);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            gripper_empty = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="kitting_8cpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a>(gripper_empty);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            goal_state.at(i) = <a class="code" href="kitting_8cpp.html#a501472bb4e47fb34ea4ca18650628474">place</a>(i, goal_state.at(i), gripper_empty);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            gripper_empty = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="kitting_8cpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a>(gripper_empty);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="ttc" id="akitting_8cpp_html_a0c31e1b1a8c8fff9904b36a304f60824"><div class="ttname"><a href="kitting_8cpp.html#a0c31e1b1a8c8fff9904b36a304f60824">get_initial_state</a></div><div class="ttdeci">void get_initial_state(int &amp;ri, int &amp;gi, int &amp;bi)</div><div class="ttdoc">Function to retrieve initial state of bins.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00005">kitting.cpp:5</a></div></div>
-<div class="ttc" id="akitting_8cpp_html_a19a5345d2ea63b331a406ee0d858d7bf"><div class="ttname"><a href="kitting_8cpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a></div><div class="ttdeci">void gripper_status(bool gripper_empty)</div><div class="ttdoc">Function to return status of gripper.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00102">kitting.cpp:102</a></div></div>
-<div class="ttc" id="akitting_8cpp_html_a1da3b45d5a190dd191b51c99b09ac72b"><div class="ttname"><a href="kitting_8cpp.html#a1da3b45d5a190dd191b51c99b09ac72b">pick</a></div><div class="ttdeci">int pick(int int_color, int bin_status, bool gripper_empty)</div><div class="ttdoc">Pick function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00066">kitting.cpp:66</a></div></div>
-<div class="ttc" id="akitting_8cpp_html_a501472bb4e47fb34ea4ca18650628474"><div class="ttname"><a href="kitting_8cpp.html#a501472bb4e47fb34ea4ca18650628474">place</a></div><div class="ttdeci">int place(int int_color, int blocks_needed, bool gripper_empty)</div><div class="ttdoc">Place function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00084">kitting.cpp:84</a></div></div>
-<div class="ttc" id="akitting_8cpp_html_acb7762618a1a559bb05cb0c104b2128f"><div class="ttname"><a href="kitting_8cpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a></div><div class="ttdeci">void get_goal_state(int &amp;rg, int &amp;gg, int &amp;bg)</div><div class="ttdoc">Function to retrieve desired state of tray.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00036">kitting.cpp:36</a></div></div>
+<div class="ttc" id="akitting_8cpp_html_a19a5345d2ea63b331a406ee0d858d7bf"><div class="ttname"><a href="kitting_8cpp.html#a19a5345d2ea63b331a406ee0d858d7bf">gripper_status</a></div><div class="ttdeci">void gripper_status(bool gripper_empty)</div><div class="ttdoc">Function to return status of gripper.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00131">kitting.cpp:131</a></div></div>
+<div class="ttc" id="akitting_8cpp_html_a1da3b45d5a190dd191b51c99b09ac72b"><div class="ttname"><a href="kitting_8cpp.html#a1da3b45d5a190dd191b51c99b09ac72b">pick</a></div><div class="ttdeci">int pick(int int_color, int bin_status, bool gripper_empty)</div><div class="ttdoc">Pick function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00095">kitting.cpp:95</a></div></div>
+<div class="ttc" id="akitting_8cpp_html_a501472bb4e47fb34ea4ca18650628474"><div class="ttname"><a href="kitting_8cpp.html#a501472bb4e47fb34ea4ca18650628474">place</a></div><div class="ttdeci">int place(int int_color, int blocks_needed, bool gripper_empty)</div><div class="ttdoc">Place function.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00113">kitting.cpp:113</a></div></div>
+<div class="ttc" id="akitting_8cpp_html_acb7762618a1a559bb05cb0c104b2128f"><div class="ttname"><a href="kitting_8cpp.html#acb7762618a1a559bb05cb0c104b2128f">get_goal_state</a></div><div class="ttdeci">void get_goal_state(int &amp;rg, int &amp;gg, int &amp;bg)</div><div class="ttdoc">Function to retrieve desired state of tray.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00032">kitting.cpp:32</a></div></div>
+<div class="ttc" id="akitting_8cpp_html_ad712f8d275f6b19379cb35969f806dad"><div class="ttname"><a href="kitting_8cpp.html#ad712f8d275f6b19379cb35969f806dad">check_inputs</a></div><div class="ttdeci">bool check_inputs(int ri, int gi, int bi, int rg, int gg, int bg)</div><div class="ttdoc">Function to confirm tray goal state requirements and if enough blocks are in bins to meet goal.</div><div class="ttdef"><b>Definition:</b> <a href="kitting_8cpp_source.html#l00057">kitting.cpp:57</a></div></div>
 <div class="ttc" id="akitting_8hpp_html"><div class="ttname"><a href="kitting_8hpp.html">kitting.hpp</a></div><div class="ttdoc">ENPM-702 assignment 2.</div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00006">main.cpp:6</a></div></div>
+<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00005">main.cpp:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

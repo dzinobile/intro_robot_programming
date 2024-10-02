@@ -12,7 +12,7 @@ int main()
     //! Get goal state
     int r_goal{}, g_goal{}, b_goal{};
     get_goal_state(r_goal, g_goal, b_goal);
-
+    
     //! Check inputs meet required parameters
     bool input_check = check_inputs(r_initial, g_initial, b_initial, r_goal, g_goal, b_goal);
     while (input_check == false) {
